@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DualView</string>
+
+    <string name="txtKey">Key:</string>
+    <string name="txtValue">Value:</string>
+
+    <string name="txtKeyPlaceHolder">beep</string>
+    <string name="txtValuePlaceHolder">boop</string>
+
+    <string name="btnCheckList">Check List</string>
+
+</resources>

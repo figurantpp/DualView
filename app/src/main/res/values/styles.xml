@@ -1,0 +1,41 @@
+<resources
+    >
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SimpleTextView">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/abeezee</item>
+
+    </style>
+
+    <style name="SimpleDataTextView" parent="@style/SimpleTextView">
+        <item name="android:textColor">@android:color/secondary_text_light</item>
+    </style>
+
+    <style name="DefaultCard">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>item>
+        <item name="cardElevation">3dp</item>item>
+    </style>
+
+    <style name="DefaultFrame">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/selection</item>
+    </style>
+
+</resources>

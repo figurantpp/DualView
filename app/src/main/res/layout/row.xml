@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/selection"
+    >
+
+    <FrameLayout
+        android:id="@+id/rowFirstFrame"
+        style="@style/DefaultFrame"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rowFirstCard"
+            style="@style/DefaultCard"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/rowTxtFirstKey"
+                    style="@style/SimpleTextView"
+                    android:text="@string/txtKey" />
+
+                <TextView
+                    android:id="@+id/rowTxtFirstKeyData"
+                    style="@style/SimpleDataTextView"
+                    android:layout_toEndOf="@id/rowTxtFirstKey"
+                    android:text="@string/txtKeyPlaceHolder" />
+
+
+                <TextView
+                    android:id="@+id/rowTxtFirstValue"
+                    style="@style/SimpleTextView"
+                    android:layout_below="@id/rowTxtFirstKey"
+                    android:text="@string/txtValue" />
+
+                <TextView
+                    android:id="@+id/rowTxtFirstValueData"
+                    style="@style/SimpleDataTextView"
+                    android:layout_below="@id/rowTxtFirstKeyData"
+                    android:layout_toEndOf="@id/rowTxtFirstValue"
+                    android:text="@string/txtValuePlaceHolder" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/rowSecondFrame"
+        style="@style/DefaultFrame">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rowSecondCard"
+            style="@style/DefaultCard"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/rowTxtSecondKey"
+                    style="@style/SimpleTextView"
+                    android:text="@string/txtKey"
+                    />
+
+                <TextView
+                    android:id="@+id/rowTxtSecondKeyData"
+                    style="@style/SimpleDataTextView"
+                    android:layout_toEndOf="@id/rowTxtSecondKey"
+                    android:text="@string/txtKeyPlaceHolder"
+                    />
+
+                <TextView
+                    android:id="@+id/rowTxtSecondValue"
+                    style="@style/SimpleTextView"
+                    android:text="@string/txtValue"
+                    android:layout_below="@id/rowTxtSecondKey"
+                    />
+
+                <TextView
+                    android:id="@+id/rowTxtSecondValueData"
+                    style="@style/SimpleDataTextView"
+                    android:text="@string/txtValuePlaceHolder"
+                    android:layout_below="@id/rowTxtSecondKeyData"
+                    android:layout_toEndOf="@id/rowTxtSecondValue"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</LinearLayout>
