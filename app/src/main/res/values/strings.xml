@@ -9,4 +9,6 @@
 
     <string name="btnCheckList">Check List</string>
 
+    <string name="errorNothingSelected">Please Select an Item</string>
+
 </resources>

@@ -2,6 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRoot"
+    style="@style/SimpleTextView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -15,5 +17,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainTxtKey"
+        style="@style/SimpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:text="@string/txtKey"
+        app:layout_constraintBottom_toTopOf="@+id/mainBtnCheckList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainTxtKeyData"
+        style="@style/SimpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/txtKeyPlaceHolder"
+        app:layout_constraintStart_toEndOf="@+id/mainTxtKey"
+        app:layout_constraintTop_toTopOf="@+id/mainTxtKey" />
+
+    <TextView
+        android:id="@+id/mainTxtValue"
+        style="@style/SimpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/txtValue"
+        app:layout_constraintStart_toStartOf="@+id/mainTxtKey"
+        app:layout_constraintTop_toBottomOf="@+id/mainTxtKey" />
+
+    <TextView
+        android:id="@+id/mainTxtValueData"
+        style="@style/SimpleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtValuePlaceHolder"
+        app:layout_constraintStart_toStartOf="@+id/mainTxtKeyData"
+        app:layout_constraintTop_toTopOf="@+id/mainTxtValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

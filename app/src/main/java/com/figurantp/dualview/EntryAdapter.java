@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.util.Pair;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,6 +21,18 @@ public class EntryAdapter extends  RecyclerView.Adapter<EntryAdapter.EntryHolder
     private Context context;
 
     private List<Pair<Entry,Entry>> entries;
+
+    @Nullable
+    public Entry getSelectedEntry() {
+
+        if (selectedIndex == -1) {
+            return null;
+        }
+
+        Pair<Entry, Entry> pair = entries.get(selectedIndex);
+
+        return isFirst ? pair.first : pair.second;
+    }
 
 
     // TODO: IMPLEMENT PAYLOAD
@@ -62,6 +75,7 @@ public class EntryAdapter extends  RecyclerView.Adapter<EntryAdapter.EntryHolder
 
     }
 
+
     @NonNull
     @Override
     public EntryHolder onCreateViewHolder(@NonNull ViewGroup container, int viewType) {
@@ -71,10 +85,12 @@ public class EntryAdapter extends  RecyclerView.Adapter<EntryAdapter.EntryHolder
         return new EntryHolder(inflater.inflate(R.layout.row, container, false));
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull EntryHolder row, int position) {
+
         Pair<Entry,Entry> selectedEntries = entries.get(position);
+
+        // First Frame
 
         if (selectedEntries.first == null) {
             throw new IllegalStateException
@@ -84,9 +100,9 @@ public class EntryAdapter extends  RecyclerView.Adapter<EntryAdapter.EntryHolder
         row.txtFirstKey.setText(selectedEntries.first.getKey());
         row.txtFirstValue.setText(selectedEntries.first.getValue());
 
-        //
+        // Second Frame
 
-
+        row.secondFrame.setVisibility(View.VISIBLE);
 
         if (selectedEntries.second == null) {
             row.secondFrame.setVisibility(View.INVISIBLE);
